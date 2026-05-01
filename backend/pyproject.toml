@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dbviewer"
+version = "0.1.0"
+description = "SlashDB-style read-only table filter (Pyramid + SQLAlchemy + React)"
+requires-python = ">=3.11"
+dependencies = [
+  "pyramid>=2.0",
+  "pyramid-mako",
+  "SQLAlchemy>=2.0",
+  "waitress",
+  "WebOb",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "pytest-cov", "WebTest"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["dbviewer*"]
+
+[tool.setuptools.package-data]
+dbviewer = ["static/**/*", "templates/**/*"]
+
+[project.entry-points."paste.app_factory"]
+main = "dbviewer:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q --cov=dbviewer --cov-report=term-missing --cov-report=html"

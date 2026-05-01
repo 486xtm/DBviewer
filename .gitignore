@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
+.env
+node_modules/
+backend/Chinook_Sqlite.sqlite
+.venv/
+venv/
