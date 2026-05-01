@@ -1,6 +1,4 @@
-# dbviewer (vt_enterprise)
-
-A small **SlashDB-style** demo: filter a **single table** by **one column** at a time (equality match) and show the rows in the browser.
+# dbviewer
 
 - **Backend:** Python 3, [Pyramid](https://trypyramid.com/), [SQLAlchemy](https://www.sqlalchemy.org/) (reflected tables), [Mako](https://www.makotemplates.org/) templates for the HTML shell.
 - **Frontend:** React (Vite) — parses the URL path, loads JSON from the API, renders an HTML table.
